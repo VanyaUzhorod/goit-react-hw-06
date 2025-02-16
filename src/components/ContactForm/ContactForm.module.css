@@ -10,7 +10,7 @@
   padding: 30px;
   width: 100%;
   max-width: 400px;
-  background: orange;
+  background: white;
   border: 1px solid #ddd;
 
   border-radius: 10px;
@@ -25,7 +25,7 @@
 label {
   font-size: 16px;
   font-weight: 500;
-  color: white;
+  color: black;
 }
 .input {
   padding: 10px 15px;
@@ -33,13 +33,6 @@ label {
   border: 1px solid #ccc;
   border-radius: 5px;
   transition: border-color 0.3s ease;
-}
-
-.input:focus {
-  border-color: #007bff;
-
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .error {
@@ -54,7 +47,7 @@ label {
   font-weight: 600;
   color: #fff;
 
-  background-color: black;
+  background-color: green;
 
   border: none;
   border-radius: 5px;
@@ -72,4 +65,9 @@ label {
   background-color: black;
 
   transform: scale(1);
+}
+.item {
+  border: 2px solid green;
+  transition: border-color 0.3s, color 0.3s;
+  border-radius: 5px;
 }

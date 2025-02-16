@@ -11,14 +11,6 @@
 
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
-
-  .search:focus {
-    border-color: #007bff;
-
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-
-    outline: none;
-  }
 }
 
 .serchHunt {
@@ -28,5 +20,5 @@
   border-radius: 5px;
   font-size: 14px;
   padding: 8px 1px;
-  background-color: white;
+  background-color: black;
 }

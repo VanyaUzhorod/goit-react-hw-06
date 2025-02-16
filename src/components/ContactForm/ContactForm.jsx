@@ -1,8 +1,17 @@
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
+import { useDispatch } from "react-redux";
+import { addContact } from "../../redux/contactsSlice.js";
 
-const ContactForm = ({ addContact }) => {
+const ContactForm = () => {
+  const dispatch = useDispatch();
+  const handleSubmit = (values, { resetForm }) => {
+    dispatch(addContact(values));
+    values.name, values.number;
+    resetForm();
+  };
+
   const onlyLetters = /^[A-Za-zА-Яа-яЄєІіЇїҐґ-\s]+$/;
   const onlyNumbers = /^[0-9]+$/;
 
@@ -24,10 +33,7 @@ const ContactForm = ({ addContact }) => {
       <Formik
         initialValues={{ name: "", number: "" }}
         validationSchema={validationShema}
-        onSubmit={(values, { resetForm }) => {
-          addContact(values.name, values.number);
-          resetForm();
-        }}
+        onSubmit={handleSubmit}
       >
         {() => (
           <Form className={css.form}>
